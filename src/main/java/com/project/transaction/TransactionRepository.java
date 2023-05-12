@@ -16,6 +16,9 @@ public interface TransactionRepository  extends JpaRepository<Transaction,String
     @Query(value = "SELECT t FROM Transaction t WHERE t.id=:id")
     Optional<Transaction> findById(@Param("id")int id);
 
+    @Query(value = "SELECT t FROM Transaction t WHERE t.buyer_id=:id")
+    Optional<Transaction> findByBuyer(@Param("id")int id);
+
     @Transactional
     @Modifying
     @Query(value = "UPDATE transactions SET status = :status WHERE id = :id", nativeQuery = true)

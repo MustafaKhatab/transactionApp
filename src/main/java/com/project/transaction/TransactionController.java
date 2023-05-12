@@ -39,6 +39,16 @@ import java.net.URI;
         }
     }
 
+    @GetMapping("/buyer_id/{id}")
+    public ResponseEntity<Transaction> getTransactionByBuyerId(@PathVariable("id") int id) {
+        Optional<Transaction> transaction = transactionRepository.findByBuyer(id);
+        if (transaction.isPresent()) {
+            return ResponseEntity.ok(transaction.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @PostMapping
     public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction) {
         Transaction savedTransaction = transactionRepository.save(transaction);
