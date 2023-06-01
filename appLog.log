@@ -1,0 +1,37 @@
+2023-06-02 01:34:36,533 [INFO] com.project.transaction.TransactionApplication [main] Starting TransactionApplication using Java 19.0.2 with PID 2184 (C:\Users\moeme\Downloads\ProjectScalabe\Project\transactionApp\target\classes started by moeme in C:\Users\moeme\Downloads\ProjectScalabe\Project\transactionApp)
+2023-06-02 01:34:36,535 [DEBUG] com.project.transaction.TransactionApplication [main] Running with Spring Boot v3.0.6, Spring v6.0.8
+2023-06-02 01:34:36,536 [INFO] com.project.transaction.TransactionApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-06-02 01:34:37,993 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-02 01:34:38,009 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-02 01:34:38,335 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 315 ms. Found 1 JPA repository interfaces.
+2023-06-02 01:34:38,371 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-02 01:34:38,374 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-02 01:34:38,401 [INFO] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.project.transaction.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-06-02 01:34:38,401 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-06-02 01:34:40,411 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-06-02 01:34:40,428 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-06-02 01:34:40,428 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-02 01:34:40,709 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-06-02 01:34:40,710 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4064 ms
+2023-06-02 01:34:41,624 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-02 01:34:41,726 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-02 01:34:42,256 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-02 01:34:42,944 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c5747db
+2023-06-02 01:34:42,946 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-02 01:34:43,024 [INFO] SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-02 01:34:44,310 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-02 01:34:44,349 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 01:34:46,263 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-02 01:34:46,977 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-02 01:34:47,019 [INFO] com.project.transaction.TransactionApplication [main] Started TransactionApplication in 13.032 seconds (process running for 14.556)
+2023-06-02 01:35:02,470 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-02 01:35:02,471 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-02 01:35:02,472 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-06-02 01:35:02,497 [TRACE] com.project.transaction.TransactionApplication [http-nio-8080-exec-1] A TRACE Message
+2023-06-02 01:35:02,497 [DEBUG] com.project.transaction.TransactionApplication [http-nio-8080-exec-1] A DEBUG Message
+2023-06-02 01:35:02,497 [INFO] com.project.transaction.TransactionApplication [http-nio-8080-exec-1] An INFO Message
+2023-06-02 01:35:02,497 [WARN] com.project.transaction.TransactionApplication [http-nio-8080-exec-1] A WARN Message
+2023-06-02 01:35:02,497 [ERROR] com.project.transaction.TransactionApplication [http-nio-8080-exec-1] An ERROR Message
+2023-06-02 01:35:18,122 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 01:35:18,124 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-02 01:35:18,127 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
