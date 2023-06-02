@@ -1,7 +1,7 @@
 package com.project.transaction;
 
 import jakarta.persistence.*;
-
+import java.time.LocalDate;
 import java.sql.Date;
 @Entity
 @Table(name = "transactions")
@@ -66,6 +66,10 @@ public class Transaction {
 
     public int getId() {
         return id;
+    }
+    @PrePersist
+    protected void onCreate() {
+        created_at = Date.valueOf(LocalDate.now());
     }
 
 

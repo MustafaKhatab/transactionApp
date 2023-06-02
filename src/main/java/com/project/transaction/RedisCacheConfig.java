@@ -2,6 +2,7 @@ package com.project.transaction;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.cache.interceptor.SimpleKeyGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,16 +22,17 @@ public class RedisCacheConfig extends CachingConfigurerSupport {
         RedisStandaloneConfiguration config = new RedisStandaloneConfiguration("localhost", 6379);
         return new LettuceConnectionFactory(config);
     }
+
     @Bean
     public RedisCacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
-        RedisCacheConfiguration cacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
-                .entryTtl(Duration.ofMinutes(5));
+        RedisCacheConfiguration listingCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofMinutes(10)).computePrefixWith(cacheName -> "transactions:".concat(cacheName));
         return RedisCacheManager.builder(redisConnectionFactory)
-                .cacheDefaults(cacheConfiguration)
+                .withCacheConfiguration("transactions", listingCacheConfiguration)
                 .build();
     }
+
     @Bean
-    public SimpleKeyGenerator keyGenerator() {
+    public KeyGenerator keyGenerator() {
         return new SimpleKeyGenerator();
     }
 }
